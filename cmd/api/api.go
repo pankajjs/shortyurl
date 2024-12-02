@@ -17,5 +17,5 @@ func NewApiServer(addr string) *ApiServer {
 }
 
 func (a *ApiServer) Run() error {	
-	return http.ListenAndServe(a.Addr, router.NewMainRouter())
+	return http.ListenAndServe(a.Addr, router.ApiRouter())
 }

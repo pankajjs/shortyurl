@@ -12,6 +12,7 @@ var StartTime = time.Now()
 
 type Config struct {
 	PORT string
+	AUTH_URL string
 }
 
 var ENV = LoadEnv()
@@ -25,6 +26,7 @@ func LoadEnv() *Config{
 	
 	return &Config{
 		PORT: getEnv("PORT", ":8080"),
+		AUTH_URL: getEnv("AUTH_URL", ""),
 	}
 
 }
