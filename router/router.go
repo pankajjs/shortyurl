@@ -24,7 +24,7 @@ func V1Router() *http.ServeMux {
 
 func AuthRouter() *http.ServeMux {
 	router:= http.NewServeMux()
-	router.HandleFunc("/google", controller.HandleAuth)
-	router.HandleFunc("/callback/google", controller.HandleAuthCallback)
+	router.HandleFunc("/google", controller.HandleGoogleAuth)
+	router.HandleFunc("/google/callback", controller.HandleGoogleAuthCallback)
 	return router
 }
