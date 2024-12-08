@@ -7,7 +7,7 @@ import (
 )
 
 func main(){
-	port:= config.ENV.PORT
+	port:= config.Env.PORT
 	api:= api.NewApiServer(port)
 
 	log.Printf("Attempting to start server at port %v", port)

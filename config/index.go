@@ -17,7 +17,7 @@ type Config struct {
 	CALLBACK_URL string
 }
 
-var ENV = LoadEnv()
+var Env = LoadEnv()
 
 func LoadEnv() *Config{
 	if err:= godotenv.Load(); err != nil {
