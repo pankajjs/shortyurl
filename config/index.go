@@ -12,7 +12,9 @@ var StartTime = time.Now()
 
 type Config struct {
 	PORT string
-	AUTH_URL string
+	CLIENT_ID string
+	CLIENT_SECRET string
+	CALLBACK_URL string
 }
 
 var ENV = LoadEnv()
@@ -26,7 +28,9 @@ func LoadEnv() *Config{
 	
 	return &Config{
 		PORT: getEnv("PORT", ":8080"),
-		AUTH_URL: getEnv("AUTH_URL", ""),
+		CLIENT_ID: getEnv("CLIENT_ID", "<client-id>"),
+		CLIENT_SECRET: getEnv("CLIENT_SECRET", "<client-secret>"),
+		CALLBACK_URL: getEnv("CALLBACK_URL", "<callback-url>"),
 	}
 
 }
